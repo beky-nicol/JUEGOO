@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teddy Mission: Terminal Física 🐻⚡</title>
+    <!-- Cargamos Orbitron desde Google Fonts -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- PANTALLA 1: REGISTRO DE NOMBRE Y APELLIDO -->
+    <div id="screen-welcome" class="pantalla">
+        <div class="contenedor">
+            <div class="personaje" style="font-size: 80px; text-align: center;">🐻</div>
+            <h1>TEDDY <span>MISSION</span></h1>
+            <h2>REGISTRO DE PILOTOS</h2>
+            <p>Por favor, escribe tus datos usando el teclado físico de tu computadora:</p>
+            
+            <div class="formulario">
+                <label for="input-name">NOMBRE(S):</label>
+                <input type="text" id="input-name" placeholder="Escribe tu nombre aquí..." autocomplete="off">
+                
+                <label for="input-lastname">APELLIDO(S):</label>
+                <input type="text" id="input-lastname" placeholder="Escribe tu apellido aquí..." autocomplete="off">
+            </div>
+            
+            <button onclick="startGame()">INICIAR MISIÓN 🚀</button>
+        </div>
+    </div>
+
+    <!-- PANTALLA 2: JUEGO DE REPLICAR LA ORACIÓN -->
+    <div id="screen-game" class="pantalla oculto">
+        <div class="juego">
+            <div class="barra">
+                <div class="tarjetaJugador">PILOTO: <span id="player-fullname" style="color: #00f5ff;"></span></div>
+            </div>
+
+            <h1>REPLICA EL <span>CÓDIGO</span></h1>
+            <p>Copia la siguiente transmisión exactamente igual utilizando tu teclado físico:</p>
+            
+            <!-- Oración del osito en la caja de preguntas morada -->
+            <div class="pregunta-box">
+                <h2>Mi osito Teddy tiene 4 patas, su cuerpo es muy blando y su pelo suave.</h2>
+            </div>
+            
+            <div class="formulario">
+                <label for="input-game">SISTEMA DE ESCRITURA EN VIVO:</label>
+                <input type="text" id="input-game" placeholder="Empieza a escribir la oración aquí..." autocomplete="off" style="font-size: 22px;">
+            </div>
+            
+            <button onclick="checkResult()">ENVIAR DATOS 💌</button>
+        </div>
+    </div>
+
+    <!-- PANTALLA 3: FELICITACIONES / EXITO -->
+    <div id="screen-win" class="pantalla oculto">
+        <div class="contenedor">
+            <div class="imagen-sala" style="font-size: 100px; text-align: center;">🐻</div>
+            <h1>MISIÓN <span>COMPLETA</span></h1>
+            
+            <div id="resultadoFinal">
+                <p>¡Los datos han sido validados por la terminal informática!</p>
+                <h2 style="color: #c77dff; margin-top: 15px; text-shadow: 0 0 10px #c77dff;">¡Eres una superestrella espacial! ⭐</h2>
+            </div>
+            
+            <button onclick="resetGame()">REINICIAR SISTEMA 🔄</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
